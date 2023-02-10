@@ -36,6 +36,8 @@ a[href="#"]{
 .logo{
     width:200px;
 }
-section,section div, div{
+.texto{
     display: inline-block;
+    height: 40%;
+    width: 80%;
 }
