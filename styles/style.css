@@ -37,13 +37,15 @@ body{
 .btn-nav{
     display: flex;
     position: absolute;
-    top: 3vh;
-    right: 3vw;
+    top: 0.9vh;
+    right: 9vw;
 }
 .btn-nav a{
     margin: 0 0.5rem;
 }
+
 header img{
+    
     width:100%;
     object-fit: cover;
     height: 28rem;
@@ -67,11 +69,11 @@ main{
     justify-content: center;
     align-items: center;
     margin: -0.3rem auto ;
-    width: 80vw;
+    width: 100vw;
     background-color: aliceblue;
 }
 .title{ 
-    width: 80vw;
+    width: 100vw;
     justify-content: center;
     text-align: center;
     border: black solid 1px;
