@@ -1,55 +1,91 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Comic Sans MS", "Comic Sans";
 }
-.d-flex{
+
+.d-flex {
     display: flex;
 }
-.row{
+
+.row {
     flex-direction: row;
 }
-.column{
+
+.column {
     flex-direction: column;
 }
-.justify-center{
+
+.justify-center {
     justify-content: center;
 }
-.align-center{
-    align-items: center;    
+
+.align-center {
+    align-items: center;
 }
-color{
+
+color {
     background-color: red;
 }
-color2{
+
+color2 {
     background-color: cyan;
 }
-body{
-    background-image:linear-gradient(
-            90deg,
-            rgb(0, 42, 10),
-            rgba(1, 102, 2, 0.394),
-            rgb(0, 42, 10)
-          )
+
+@media only screen and (min-width:320px) and (max-width:768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        background-image: url("/images/logo_Mighty_ducks-01.png"),
+            linear-gradient(90deg,
+                rgba(0, 45, 0, 0.932),
+                rgba(0, 45, 0, 0.494),
+                rgb(0, 45, 0, 0.932));
+        background-repeat: repeat;
+        background-size: contain;
+        height: 100vh;
+    }
 }
+
+@media only screen and (min-width:769px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        background-image: url("/images/logo_Mighty_ducks-01.png"),
+            linear-gradient(90deg,
+                rgba(0, 45, 0, 0.932),
+                rgba(0, 45, 0, 0.494),
+                rgb(0, 45, 0, 0.932));
+        background-repeat: repeat;
+        background-size: cover;
+        height: 100vh;
+        max-width: 100vw;
+    }
+}
+
 /*header*/
-.btn-nav{
+
+.btn-nav {
     display: flex;
     position: absolute;
     top: 0.9vh;
     right: 9vw;
+    max-height: min-content;
+
 }
-.btn-nav a{
+
+.btn-nav a {
     margin: 0 0.5rem;
 }
 
-header img{
-    
-    width:100%;
+header img {
+    width: 100%;
     object-fit: cover;
-    height: 28rem;
-} 
+    max-height: 29rem;
+}
 
 nav a {
     color: white;
@@ -59,77 +95,129 @@ nav a {
     box-shadow: black 1px 1px 2px;
     text-decoration: none;
 }
-a[href="#"]{
+
+a[href="#"] {
     background-color: green;
 }
+
 /*main*/
-main{
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: -0.3rem auto ;
-    width: 100vw;
-    background-color: aliceblue;
+    margin: -0.3rem auto;
+    width: 100%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.653);
 }
-.title{ 
-    width: 100vw;
+
+.title {
+    width: 100%;
     justify-content: center;
     text-align: center;
-    border: black solid 1px;
 }
-.title-rule{ 
-    padding: 0 0 0.5rem 0 ;
+
+.title-rule {
+    padding: 0 0 0.5rem 0;
 }
-.img{
+
+.img {
     object-fit: cover;
-    
 }
-.img1, .img2, .img3{
+
+.img1,
+.img2,
+.img3 {
     max-width: 300px;
     height: 300px;
     border-radius: 50%;
 }
 
-.logo{
+.logo {
     display: flex;
     align-self: start;
     max-width: 200px;
     max-height: 200px;
 }
 
-.document{
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.document {
     margin: 1rem 6rem;
     align-self: start;
 }
-table{
-    background-color: green   ;  
+
+table {
+    background-color: green;
     border: 1px solid black;
     margin: 1rem auto;
 }
 
-th,tr, td{
-    
+th,
+tr,
+td {
+
     background-color: yellow;
     padding: 0.5rem;
 }
-dt{
-    font-weight: bold;
-}
-dd{
-    
-}
 
-article{
+article {
     margin: 1rem 6rem;
     align-self: start;
 }
-.alpha{
-    list-style-type:lower-alpha;
+
+.alpha {
+    list-style-type: lower-alpha;
 }
-.circle{
- list-style:circle;
+
+.circle {
+    list-style-type: circle;
 }
-.ident{
-    text-indent: 2em 
+
+.ident {
+    text-indent: 2em
+}
+@media screen and (min-width: 768px) {
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 50rem;
+        padding: 1rem;
+    }
+
+}
+.form {
+    margin: 1rem .5rem;
+    max-width: 300px;
+}
+.form-button{
+    max-width: 100px;
+}
+.title-registration{
+    padding: 1rem 0;
+}
+.maps-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.map{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
 }
